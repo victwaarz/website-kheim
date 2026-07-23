@@ -4,12 +4,102 @@
     <meta charset="UTF-8">
     <title>K.H. Eendracht Is Macht - Bovelingen</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="background"></div>
-    <div class="placeholder">
-        <img src="logo.png"/>
-        <p>Hier wordt een nieuwe website gebouwd. Tot binnenkort!</p>
+    <table class="menu">
+        <tr>
+            <td class="menu-item menu-item-active" onclick="show(PLACEHOLDER)">Home</td>
+            <td class="menu-item" onclick="show(HISTORY)">Geschiedenis</td>
+            <td class="menu-item" onclick="show(CALENDAR)">Kalender</td>
+            <td class="menu-item" onclick="show(CONTACT)">Contact</td>
+        </tr>
+    </table>
+    <div class="page">
+        <div id="PLACEHOLDER" class="placeholder">
+            <img src="logo.png"/>
+            <p>Hier wordt een nieuwe website gebouwd. Tot binnenkort!</p>
+        </div>
+        <div id="HISTORY" class="history" style="display: none">
+            <section id="JEAN_VANMECHELEN">
+                <h2>In den beginne: Jean Van Mechelen</h2>
+                <p>
+                    De fanfare ontstond eigenlijk eerder bij toeval, bij de viering van de gouden bruiloft van Eduard Schoefs en Betje Mignolet in 1929.
+                    <br>
+                    De feestelingen zouden per stoet rond het dorp gereden worden.
+                    Enkele jaren voordien was hier nog een fanfare geweest, maar toen hun dirigent Jean Erens naar Brussel verhuisde, werd de vereniging op non-actief gezet.
+                    Bijgevolg waren er nog altijd mensen die in deze fanfare gespeeld hadden en een instrument bezaten.
+                    <br>
+                    Eén onder hen, onderwijzer <span class="goldAndBold">Jean Van Mechelen</span>, kreeg het idee de voornoemde gouden-bruiloftstoet muzikaal op te luisteren.
+                    Andere leden werden opgetrommeld, Van Mechelen leerde hen gauw enkele marsen aan en zo namen zij deel aan de stoet en werd de huidige fanfare geboren.
+                    De daaropvolgende winter werd een cursus notenleer georganiseerd en stelde de gemeente een lokaal ter beschikking.
+                    <br><br>
+                    In 1929 begonnen, telde zij in 1933 al 33 spelende leden.
+                    <br><br>
+                    Tijdens de tweede wereldoorlog werden alle instrumenten aangeslagen door de bezetter doch nauwelijks waren de Duitsers gevlucht of de fanfare hield reeds een zegeoptocht naar Rukkelingen.
+                    <br>
+                    Haar eerste vorm van kostumering kreeg zij in 1952 onder de vorm van een groen fluwelen kepi met grijze rand en zwarte klip.
+                </p>
+            </section>
+
+            <section id="VICTOR_THIRION">
+                <h2>Victor Thirion</h2>
+                <p>
+                    Toen meester Van Mechelen zich in 1957 terugtrok, nam een ander onderwijzer het roer over: namelijk de heer <span class="goldAndBold">Victor Thirion</span>.
+                    <br>
+                    Hij zorgde ervoor dat de fanfare in 1966 uitgerust werd met een mooi grijs uniform met rode versieringen.
+                    Onder zijn impuls kwam er ook voor de eerste keer een trommelkorps bestaande uit een groep jongens, opgeleid door de heer Jean Nelis, die jammer genoeg niet lang daarna overleed.
+                    <br>
+                    In 1974 richtte Thirion een nieuw trommelkorps op, ditmaal bestaande uit allemaal meisjes.
+                    Na een opleiding van twee jaar trok dit korps de straat op, getooid in een een prachtig uniform, onder leiding van de twee tamboer-majoors Marie-Sylviane Coune en Marie-Paule Vranken.
+                    <br>
+                    Ter gelegenheid van haar 50-jarig bestaan werd de fanfare in 1979 verheven tot 'Koninklijke' en werd een nieuw vaandel aangekocht.
+                    In 1981 kreeg het trommelkorps nieuwe uniformen.
+                    <br>
+                    Dan kwam 18 oktober 1984, een zwarte dag voor de fanfare: het overlijden van voorzitter en dirigent Victor Thirion.
+                </p>
+            </section>
+
+            <section id="NEVEN_MISOTTEN">
+                <h2>Hubert Neven</h2>
+                <p>
+                    De fakkel werd overgenomen door <span class="goldAndBold">Hubert Neven</span> die de fanfare in 1985 meteen voorzag van nieuwe uniformen: ditmaal in donkerblauw.
+                    In 1992 legde hij het dirigentstokje neer vanwege zijn hoge ouderdom (76 jaar).
+
+                    Dit belandde ad interim in de handen van voorzitter <span class="goldAndBold">Jos Misotten</span> en een drietal maanden bij diens broer Fernand Misotten.
+                </p>
+            </section>
+
+            <section>
+                <h2>Jong talent</h2>
+                <p>
+                    In 1994 gaf de voorzitter het dirigentstokje over aan de toen 18-jarige <span class="goldAndBold">Bert Mignolet</span>.
+                    In enkele maanden tijd slaagde hij erin de fanfare op muzikaal vlak een ware metamorphose te laten ondergaan.
+                    Als tweede dirigent werd <span class="goldAndBold">Saskia Schoefs</span> aangesteld.
+                    Het is onder hun leiding dat in 1996 het eerste galaconcert plaatsvond, overigens één van de eersten in de streek.
+                    <br><br>
+                    In 1999 telde de vereniging zo'n 36 leden.
+                    <br><br>
+                    Na enkele jaren besloot Bert Mignolet om andere horizonten te verkennen en kwam het dirigentstokje in handen van <span class="goldAndBold">Kurt Neven</span>, kleinzoon van wijlen Hubert Neven.
+                    <br><br>
+                    Vanaf 2006 zou dit terechtkomen bij <span class="goldAndBold">Bart Falise</span>. Toen Falise in 2012 stopte, werd er niet meteen een vervanging gevonden.
+                    <br><br>
+                    Na een zoektocht van enkele weken/maanden vol proefrepetities werd in 2013 besloten om <span class="goldAndBold">Stefaan Daems</span> aan te stellen als nieuwe dirigent.
+                    <br><br>
+                    In 2023, na een periode van 10 jaar, werd gekozen voor vernieuwing met een kans voor eigen talent <span class="goldAndBold">Jonas Liesenborghs</span>.
+                    <br>
+                    Begin 2024 kwam deze samenwerking echter onvoorzien ten einde en belandde het stokje tot op heden terug in handen van ouddirigent Kurt Neven.
+                </p>
+            </section>
+        </div>
+        <div id="CALENDAR" class="calendar" style="display: none">
+            <h1>NOW SHOWING CALENDAR</h1>
+        </div>
+        <div id="CONTACT" class="contact" style="display: none">
+            <h1>NOW SHOWING CONTACT</h1>
+        </div>
     </div>
+
 </body>
 </html>

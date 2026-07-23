@@ -4,9 +4,9 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  /*overflow: hidden;*/
 }
 
 .background {
@@ -26,12 +26,37 @@ body {
   opacity: 0.4;
 }
 
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1e2121;
+}
+
+.menu-item {
+  text-align: center;
+  color: #eaae48;
+  max-width: 25%;
+  width: 25%;
+}
+
+.menu-item:hover {
+  color: #1e2121;
+  background: #eaae48;
+  cursor: pointer;
+}
+
+.menu-item-active {
+  text-decoration: underline;
+}
+
 img {
   max-width: 15%;
   height: auto;
 }
 
-.placeholder {
+.page {
   width: 100%;
   height: auto;
 
@@ -39,9 +64,28 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  overflow: scroll;
+  margin: 2.5%;
 }
 
 .placeholder p {
   font-size: 50px;
+  font-weight: bold;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: white;
+  border-radius: 2%;
+
+  padding: 2%;
+}
+
+.goldAndBold {
+  color: #eaae48;
   font-weight: bold;
 }
