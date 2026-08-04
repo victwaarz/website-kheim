@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K.H. Eendracht Is Macht - Bovelingen</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="background"></div>
-    <table class="menu">
-        <tr>
-            <td class="menu-item menu-item-active" onclick="show(PLACEHOLDER)">Home</td>
-            <td class="menu-item" onclick="show(HISTORY)">Geschiedenis</td>
-            <td class="menu-item" onclick="show(CALENDAR)">Kalender</td>
-            <td class="menu-item" onclick="show(CONTACT)">Contact</td>
-        </tr>
-    </table>
+    <nav class="menu" aria-label="Hoofdmenu">
+        <ul class="menu-list">
+            <li><button type="button" class="menu-item menu-item-active" data-page="PLACEHOLDER">Home</button></li>
+            <li><button type="button" class="menu-item" data-page="HISTORY">Geschiedenis</button></li>
+            <li><button type="button" class="menu-item" data-page="CALENDAR">Kalender</button></li>
+            <li><button type="button" class="menu-item" data-page="CONTACT">Contact</button></li>
+        </ul>
+    </nav>
     <div class="page">
         <div id="PLACEHOLDER" class="placeholder">
-            <img src="logo.png"/>
+            <img src="assets/logo.png" alt="Logo van K.H. Eendracht Is Macht"/>
             <p>Hier wordt een nieuwe website gebouwd. Tot binnenkort!</p>
         </div>
-        <div id="HISTORY" class="history" style="display: none">
+        <div id="HISTORY" class="history hidden">
             <section id="JEAN_VANMECHELEN">
                 <h2>In den beginne: Jean Van Mechelen</h2>
                 <p>
@@ -93,10 +98,10 @@
                 </p>
             </section>
         </div>
-        <div id="CALENDAR" class="calendar" style="display: none">
+        <div id="CALENDAR" class="calendar hidden">
             <h1>NOW SHOWING CALENDAR</h1>
         </div>
-        <div id="CONTACT" class="contact" style="display: none">
+        <div id="CONTACT" class="contact hidden">
             <h1>NOW SHOWING CONTACT</h1>
         </div>
     </div>

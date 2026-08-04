@@ -3,7 +3,8 @@ const HISTORY = "HISTORY";
 const CALENDAR = "CALENDAR";
 const CONTACT = "CONTACT";
 
-const VISIBLE = "inherit";
+const HIDDEN_CLASS = "hidden";
+const ACTIVE_CLASS = "menu-item-active";
 
 const PAGES = [
     PLACEHOLDER,
@@ -15,35 +16,35 @@ const PAGES = [
 menuItemsClickListener();
 
 function menuItemsClickListener() {
-    const items = document.getElementsByClassName("menu-item");
-    console.log(items);
-    for (let menuitem of items) {
-        menuitem.addEventListener("click", () => setMenuItemActive(menuitem));
+    const items = document.querySelectorAll(".menu-item");
+    for (const menuItem of items) {
+        menuItem.addEventListener("click", () => {
+            setMenuItemActive(menuItem);
+            show(menuItem.dataset.page);
+        });
     }
 }
 
-function setMenuItemActive(menuitem) {
-    console.log("Setting active: ", menuitem);
-    const items = document.getElementsByClassName("menu-item");
-    for (let item of items) {
-        let classes = "menu-item";
-        if (item === menuitem) {
-            classes += " menu-item-active";
-        }
-        item.setAttribute("class", classes);
+function setMenuItemActive(menuItem) {
+    const items = document.querySelectorAll(".menu-item");
+    for (const item of items) {
+        item.classList.toggle(ACTIVE_CLASS, item === menuItem);
     }
 }
 
 function show(page) {
     hideEverything();
-    setVisibility(page, VISIBLE);
+    setVisibility(page, true);
 }
 
 function hideEverything() {
-    PAGES.forEach(pageId => setVisibility(pageId, "none"));
+    PAGES.forEach((pageId) => setVisibility(pageId, false));
 }
 
-function setVisibility(id, value) {
+function setVisibility(id, isVisible) {
     const element = document.getElementById(id);
-    element.setAttribute("style", `display: ${value}`);
+    if (!element) {
+        return;
+    }
+    element.classList.toggle(HIDDEN_CLASS, !isVisible);
 }
