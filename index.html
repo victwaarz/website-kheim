@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K.H. Eendracht Is Macht - Bovelingen</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -99,7 +99,15 @@
             </section>
         </div>
         <div id="CALENDAR" class="calendar hidden">
-            <h1>NOW SHOWING CALENDAR</h1>
+            <section class="calendar-card">
+                <h1>Evenementenkalender</h1>
+                <p class="calendar-subtitle">Onze website markeert automatisch welke evenementen al voorbij zijn.</p>
+                <div class="calendar-filters" role="group" aria-label="Filter evenementen">
+                    <button type="button" class="calendar-filter-btn calendar-filter-btn-active" data-filter="upcoming">Aankomend</button>
+                    <button type="button" class="calendar-filter-btn" data-filter="past">Afgelopen</button>
+                </div>
+                <div id="events-list" class="events-list" aria-live="polite"></div>
+            </section>
         </div>
         <div id="CONTACT" class="contact hidden">
             <h1>NOW SHOWING CONTACT</h1>
