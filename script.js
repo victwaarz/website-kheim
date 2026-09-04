@@ -52,6 +52,7 @@ menuItemsClickListener();
 footerLinksClickListener();
 calendarFilterClickListener();
 initializeCookieConsent();
+initializeImageLoading();
 renderCalendar();
 
 function menuItemsClickListener() {
@@ -175,6 +176,43 @@ function navigateToPrivacyPage() {
 
 function hideEverything() {
     PAGES.forEach((pageId) => setVisibility(pageId, false));
+}
+
+function initializeImageLoading() {
+    const images = document.querySelectorAll("img");
+    for (const image of images) {
+        if (image.complete) {
+            setImageAsLoaded(image);
+            continue;
+        }
+
+        image.classList.add("image-loading");
+        setFigureLoadingState(image, true);
+
+        image.addEventListener("load", () => {
+            setImageAsLoaded(image);
+        }, { once: true });
+
+        image.addEventListener("error", () => {
+            image.classList.remove("image-loading");
+            image.classList.add("image-failed");
+            setFigureLoadingState(image, false);
+        }, { once: true });
+    }
+}
+
+function setImageAsLoaded(image) {
+    image.classList.remove("image-loading");
+    image.classList.add("image-loaded");
+    setFigureLoadingState(image, false);
+}
+
+function setFigureLoadingState(image, isLoading) {
+    const figure = image.closest("figure");
+    if (!figure) {
+        return;
+    }
+    figure.classList.toggle("figure-loading", isLoading);
 }
 
 function setVisibility(id, isVisible) {
