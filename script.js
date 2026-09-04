@@ -1,4 +1,4 @@
-const PLACEHOLDER = "PLACEHOLDER";
+const HOME = "HOME";
 const HISTORY = "HISTORY";
 const CALENDAR = "CALENDAR";
 const CONTACT = "CONTACT";
@@ -11,7 +11,7 @@ const FILTER_UPCOMING = "upcoming";
 const FILTER_PAST = "past";
 
 const PAGES = [
-    PLACEHOLDER,
+    HOME,
     HISTORY,
     CALENDAR,
     CONTACT
@@ -30,7 +30,7 @@ const EVENTS = [
         location: "'t Paenhuys, Heers",
         date: "27/09/2026",
         time: "12:00",
-        url: null
+        url: "https://www.facebook.com/events/2079963940062898"
     },
     {
         title: "Smooth & Swinging: Part 2",
