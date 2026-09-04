@@ -207,7 +207,9 @@
                 <div class="map-wrapper">
                     <iframe
                         title="Google Maps - Eendracht is Machtplein 1, 3870 Heers"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d756.4055115322058!2d5.2609905000770345!3d50.74017250000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c11b3b1d9d1c71%3A0x2fa0b17ab40494f5!2sEendracht%20is%20Machtplein%201%2C%203870%20Heers!5e1!3m2!1snl!2sbe!4v1785862130993!5m2!1snl!2sbe"
+                        data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d756.4055115322058!2d5.2609905000770345!3d50.74017250000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c11b3b1d9d1c71%3A0x2fa0b17ab40494f5!2sEendracht%20is%20Machtplein%201%2C%203870%20Heers!5e1!3m2!1snl!2sbe!4v1785862130993!5m2!1snl!2sbe"
+                        data-cookie-consent="required"
+                        class="hidden"
                         width="600"
                         height="450"
                         style="border:0;"
@@ -215,6 +217,9 @@
                         loading="lazy"
                         referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
+                    <p class="map-cookie-placeholder" data-embed-blocked-message>
+                        Google Maps wordt pas geladen nadat je de cookie- en trackingmelding bevestigt.
+                    </p>
                 </div>
             </section>
         </div>
@@ -243,6 +248,21 @@
             </section>
         </div>
     </div>
+    <aside id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-banner-title">
+        <h2 id="cookie-banner-title">COOKIE- EN TRACKING NOTIFICATIE</h2>
+        <p>
+            Deze website bevat embedded YouTube- en Google Maps-content. Deze diensten kunnen cookies plaatsen en gegevens
+            verzamelen als je deze content laadt of bekijkt.
+        </p>
+        <p>
+            Door verder te surfen op onze website ga je akkoord met het laden van deze externe content en de daarmee verbonden
+            privacybeleid.
+        </p>
+        <div class="cookie-banner-actions">
+            <button id="cookie-accept-btn" type="button" class="cookie-accept-btn">Ik begrijp het</button>
+            <a id="cookie-privacy-link" class="cookie-privacy-link" href="#">Privacyverklaring</a>
+        </div>
+    </aside>
     <footer class="site-footer">
         <p>
             <button type="button" class="footer-link" data-page="PRIVACY">Privacyverklaring</button>
