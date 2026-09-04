@@ -2,6 +2,7 @@ const HOME = "HOME";
 const HISTORY = "HISTORY";
 const CALENDAR = "CALENDAR";
 const CONTACT = "CONTACT";
+const PRIVACY = "PRIVACY";
 
 const HIDDEN_CLASS = "hidden";
 const ACTIVE_CLASS = "menu-item-active";
@@ -14,7 +15,8 @@ const PAGES = [
     HOME,
     HISTORY,
     CALENDAR,
-    CONTACT
+    CONTACT,
+    PRIVACY
 ];
 
 const EVENTS = [
@@ -44,6 +46,7 @@ const EVENTS = [
 let activeFilter = FILTER_UPCOMING;
 
 menuItemsClickListener();
+footerLinksClickListener();
 calendarFilterClickListener();
 renderCalendar();
 
@@ -67,6 +70,24 @@ function setMenuItemActive(menuItem) {
 function show(page) {
     hideEverything();
     setVisibility(page, true);
+}
+
+function footerLinksClickListener() {
+    const links = document.querySelectorAll(".footer-link[data-page]");
+    for (const link of links) {
+        link.addEventListener("click", () => {
+            const targetPage = link.dataset.page;
+            if (!targetPage) {
+                return;
+            }
+
+            const matchingMenuItem = document.querySelector(`.menu-item[data-page="${targetPage}"]`);
+            if (matchingMenuItem) {
+                setMenuItemActive(matchingMenuItem);
+            }
+            show(targetPage);
+        });
+    }
 }
 
 function hideEverything() {

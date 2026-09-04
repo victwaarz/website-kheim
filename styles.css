@@ -78,7 +78,7 @@ body {
 }
 
 .menu-list li {
-  width: 25%;
+  flex: 1;
 }
 
 .menu-item:last-child {
@@ -542,6 +542,67 @@ body {
   min-height: 360px;
 }
 
+.privacy-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+
+.privacy-card p,
+.privacy-card li {
+  color: rgba(243, 239, 232, 0.95);
+  line-height: 1.7;
+}
+
+.privacy-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.privacy-card a {
+  color: var(--gold-light);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.privacy-card a:hover {
+  color: var(--gold);
+}
+
+/* === Footer === */
+.site-footer {
+  width: 100%;
+  border-top: 1px solid rgba(234, 174, 72, 0.25);
+  background: rgba(20, 23, 24, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.footer-link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--gold-light);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-link:hover {
+  color: var(--gold);
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* === Utility === */
 .goldAndBold {
   color: var(--gold);
@@ -584,6 +645,10 @@ body {
 
   .contact-card {
     padding: 20px 16px;
+  }
+
+  .privacy-card ul {
+    padding-left: 16px;
   }
 
   .map-wrapper iframe {
