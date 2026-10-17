@@ -40,7 +40,7 @@ const EVENTS = [
     {
         title: "Smooth & Swinging: Part 2",
         location: "De Bammerd, Heers",
-        date: "14/10/2026",
+        date: "14/11/2026",
         time: "20:00",
         url: null
     }

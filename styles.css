@@ -250,6 +250,112 @@ img {
   border: 1px solid rgba(234, 174, 72, 0.4);
 }
 
+/* Event-kaart in de kleuren van de affiche (amber, nachtblauw, crème) */
+.home-card-event {
+  --event-amber: #d9a24f;
+  --event-amber-light: #f0c47a;
+  --event-navy: #24213d;
+  --event-cream: #f6ead2;
+
+  width: min(100%, 860px);
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(217, 162, 79, 0.28), transparent 55%),
+    linear-gradient(165deg, rgba(48, 43, 76, 0.97), rgba(26, 24, 45, 0.97));
+  border: 2px solid rgba(240, 196, 122, 0.5);
+  border-left: 8px solid var(--event-amber);
+}
+
+.home-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55);
+}
+
+.home .home-card-event img {
+  width: 100%;
+  filter: none;
+}
+
+.home-event-body {
+  display: grid;
+  gap: 16px;
+}
+
+.home-card-event .home-badge {
+  background: var(--event-amber);
+  color: var(--event-navy);
+}
+
+.home-card-event h1 {
+  color: var(--event-cream);
+  text-shadow: 3px 3px 0 rgba(217, 162, 79, 0.45);
+}
+
+.home-card-event .home-location {
+  color: var(--event-amber-light);
+}
+
+.home-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.home-details div {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(246, 234, 210, 0.08);
+  border: 1px solid rgba(240, 196, 122, 0.3);
+}
+
+.home-details dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--event-amber-light);
+}
+
+.home-details dd {
+  margin-top: 2px;
+  font-weight: 700;
+  color: var(--event-cream);
+  line-height: 1.4;
+}
+
+.home-details-note {
+  font-weight: 400;
+  color: rgba(246, 234, 210, 0.75);
+}
+
+.home-card-event .home-description {
+  color: rgba(246, 234, 210, 0.92);
+}
+
+.home-card-event .home-link {
+  background: var(--event-amber);
+  color: var(--event-navy);
+}
+
+.home-card-event .home-link:hover {
+  background: var(--event-amber-light);
+}
+
+@media (max-width: 720px) {
+  .home-card-event {
+    grid-template-columns: 1fr;
+  }
+
+  .home-poster {
+    max-width: 360px;
+    justify-self: center;
+  }
+}
+
 /* === History === */
 .history {
   display: flex;
