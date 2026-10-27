@@ -42,7 +42,7 @@ const EVENTS = [
         location: "De Bammerd, Heers",
         date: "14/11/2026",
         time: "20:00",
-        url: null
+        url: "https://www.facebook.com/events/1678489267239142"
     }
 ];
 
